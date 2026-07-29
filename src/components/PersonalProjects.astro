@@ -1,33 +1,5 @@
 ---
-const projects = [
-	{
-		title: 'TaskFlow',
-		description:
-			'A Kanban-style task manager with drag-and-drop boards, real-time sync, and keyboard shortcuts for power users.',
-		imageGradient: 'from-indigo-600 via-violet-600 to-fuchsia-600',
-		github: 'https://github.com',
-		live: 'https://example.com',
-		technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase'],
-	},
-	{
-		title: 'WeatherLens',
-		description:
-			'An interactive weather dashboard with location search, hourly forecasts, and animated data visualizations.',
-		imageGradient: 'from-cyan-600 via-blue-600 to-indigo-700',
-		github: 'https://github.com',
-		live: null,
-		technologies: ['Next.js', 'GraphQL', 'Chart.js', 'OpenWeather'],
-	},
-	{
-		title: 'Snippet Vault',
-		description:
-			'A fast snippet organizer for developers with tagging, syntax highlighting, and one-click copy.',
-		imageGradient: 'from-violet-700 via-purple-600 to-pink-600',
-		github: 'https://github.com',
-		live: 'https://example.com',
-		technologies: ['Astro', 'SQLite', 'Rust', 'Tailwind'],
-	},
-];
+import { personalProjects } from '@/data/personalProjects';
 ---
 
 <section
@@ -52,7 +24,7 @@ const projects = [
 
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 		{
-			projects.map((project) => (
+			personalProjects.map((project) => (
 				<article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition hover:border-violet-400/30 hover:bg-white/[0.07]">
 					<div
 						class={`relative aspect-video overflow-hidden bg-gradient-to-br ${project.imageGradient}`}

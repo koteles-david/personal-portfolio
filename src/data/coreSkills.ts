@@ -1,7 +1,7 @@
 export const coreSkills = [
 	{
 		name: 'React',
-		level: 90,
+		level: 100,
 		levelLabel: 'Advanced',
 		description: 'Component architecture, hooks, state management, and performance tuning in production apps.',
 		accent: 'from-cyan-400 to-sky-500',
@@ -9,7 +9,7 @@ export const coreSkills = [
 	},
 	{
 		name: 'Vue',
-		level: 85,
+		level: 100,
 		levelLabel: 'Advanced',
 		description: 'Composition API, Pinia, Nuxt workflows, and building maintainable UI systems.',
 		accent: 'from-emerald-400 to-green-500',
@@ -17,7 +17,7 @@ export const coreSkills = [
 	},
 	{
 		name: 'Astro',
-		level: 88,
+		level: 60,
 		levelLabel: 'Advanced',
 		description: 'Islands architecture, content-focused sites, and blending static speed with interactivity.',
 		accent: 'from-orange-400 to-red-500',
@@ -26,7 +26,7 @@ export const coreSkills = [
 	{
 		name: 'JavaScript',
 		level: 92,
-		levelLabel: 'Expert',
+		levelLabel: 'Advanced',
 		description: 'Modern ES features, async patterns, DOM APIs, and writing clean modular code.',
 		accent: 'from-yellow-300 to-amber-400',
 		chip: 'bg-yellow-500/10 text-yellow-200 border-yellow-500/20',

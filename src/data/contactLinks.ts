@@ -15,8 +15,8 @@ export const contactLinks = [
 	},
 	{
 		label: 'GitHub',
-		value: 'github.com/davidkoteles',
-		href: 'https://github.com/davidkoteles',
+		value: 'github.com/koteles-david',
+		href: 'https://github.com/koteles-david',
 		description: 'Explore my open-source work and side projects',
 		icon: 'github',
 	},
