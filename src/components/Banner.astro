@@ -1,5 +1,6 @@
 ---
 import BannerLayout from '../layouts/BannerLayout.astro';
+import { site } from '@/data/site';
 ---
 
 <BannerLayout>
@@ -11,6 +12,7 @@ import BannerLayout from '../layouts/BannerLayout.astro';
 		id="banner-heading"
 		class="text-gradient-animate font-display max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl"
 	>
+		<span class="sr-only">{site.name} — </span>
 		Creative Web Developer
 	</h1>
 

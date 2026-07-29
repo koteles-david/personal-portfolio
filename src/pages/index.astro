@@ -6,12 +6,10 @@ import PersonalProjects from '../components/PersonalProjects.astro';
 import TechnicalExpertise from '../components/TechnicalExpertise.astro';
 import About from '@/components/about/About.astro';
 import Contact from '@/components/Contact.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { site } from '@/data/site';
 ---
 
-<Layout>
+<Layout path="/" title={site.title} description={site.description}>
     <Header />
     <Banner />
     <PersonalProjects />
