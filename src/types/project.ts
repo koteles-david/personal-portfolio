@@ -4,6 +4,7 @@ export type PersonalProject = {
 	imageGradient: string;
 	github: string;
 	live?: string | null;
+	imageSrc?: string;
 	technologies: readonly string[];
 	wip?: true;
 };

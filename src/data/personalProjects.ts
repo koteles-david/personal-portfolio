@@ -4,9 +4,9 @@ export const personalProjects = [
 		description:
 			'Personal finance tracker with a focus on simplicity and ease of use.',
 		imageGradient: 'from-indigo-600 via-violet-600 to-fuchsia-600',
+		imageSrc: '/overview.png',
 		github: 'https://github.com/koteles-david/finance-tracker',
 		technologies: ['React', 'TypeScript', 'Tailwind', 'Electron'],
-		wip: true,
 	},
 	{
 		title: 'MimiStop',
