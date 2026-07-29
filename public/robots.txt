@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://koteles.com/sitemap.xml
+Sitemap: https://koteles.cz/sitemap.xml

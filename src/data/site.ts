@@ -1,7 +1,7 @@
 import { contactLinks } from '@/data/contactLinks';
 
 /** Canonical production URL — keep in sync with `site` in astro.config.mjs */
-export const siteUrl = 'https://koteles.com';
+export const siteUrl = 'https://koteles.cz';
 
 export const site = {
 	name: 'Dávid Koteleš',
