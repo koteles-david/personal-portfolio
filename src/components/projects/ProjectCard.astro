@@ -1,0 +1,27 @@
+---
+import type { PersonalProject } from '@/types/project';
+
+import ProjectPreview from '@/components/projects/ProjectPreview.astro';
+import ProjectWipBadge from '@/components/projects/ProjectWipBadge.astro';
+import ProjectTechList from '@/components/projects/ProjectTechList.astro';
+import ProjectLinks from '@/components/projects/ProjectLinks.astro';
+
+interface Props extends PersonalProject {}
+
+const { title, description, imageGradient, github, live, technologies, wip } = Astro.props;
+---
+
+<article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left backdrop-blur-sm transition hover:border-violet-400/30 hover:bg-white/[0.07]">
+	<ProjectPreview imageGradient={imageGradient} wip={Boolean(wip)} />
+
+	<div class="flex flex-1 flex-col p-5">
+		<div class="flex flex-wrap items-center gap-2">
+			<h3 class="font-display text-xl font-semibold text-zinc-50">{title}</h3>
+			{wip && <ProjectWipBadge projectTitle={title} />}
+		</div>
+		<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{description}</p>
+
+		<ProjectTechList projectTitle={title} technologies={technologies} />
+		<ProjectLinks projectTitle={title} github={github} live={live} />
+	</div>
+</article>

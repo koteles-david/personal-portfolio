@@ -1,0 +1,14 @@
+---
+interface Props {
+	projectTitle: string;
+}
+
+const { projectTitle } = Astro.props;
+---
+
+<span
+	class="inline-flex rounded-full border border-amber-500/30 bg-amber-500/15 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-200"
+	aria-label={`${projectTitle} is work in progress`}
+>
+	WIP
+</span>
