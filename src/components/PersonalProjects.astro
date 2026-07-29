@@ -35,12 +35,22 @@ import { personalProjects } from '@/data/personalProjects';
 							<div class="h-16 w-28 rounded-lg border border-white/20 bg-white/10 shadow-2xl backdrop-blur-sm transition duration-300 group-hover:scale-105" />
 						</div>
 						<div class="absolute bottom-3 left-3 rounded-md bg-zinc-950/60 px-2 py-1 text-xs font-medium text-zinc-200 backdrop-blur-sm">
-							Preview
+							{'wip' in project && project.wip ? 'WIP' : 'Preview'}
 						</div>
 					</div>
 
 					<div class="flex flex-1 flex-col p-5">
-						<h3 class="font-display text-xl font-semibold text-zinc-50">{project.title}</h3>
+						<div class="flex flex-wrap items-center gap-2">
+							<h3 class="font-display text-xl font-semibold text-zinc-50">{project.title}</h3>
+							{'wip' in project && project.wip && (
+								<span
+									class="inline-flex rounded-full border border-amber-500/30 bg-amber-500/15 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-200"
+									aria-label={`${project.title} is work in progress`}
+								>
+									WIP
+								</span>
+							)}
+						</div>
 						<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
 							{project.description}
 						</p>

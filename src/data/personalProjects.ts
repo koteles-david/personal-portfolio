@@ -1,29 +1,21 @@
 export const personalProjects = [
 	{
-		title: 'TaskFlow',
+		title: 'Finance tracker',
 		description:
-			'A Kanban-style task manager with drag-and-drop boards, real-time sync, and keyboard shortcuts for power users.',
+			'Personal finance tracker with a focus on simplicity and ease of use.',
 		imageGradient: 'from-indigo-600 via-violet-600 to-fuchsia-600',
-		github: 'https://github.com',
-		live: 'https://example.com',
-		technologies: ['React', 'TypeScript', 'Tailwind', 'Supabase'],
+		github: 'https://github.com/koteles-david/finance-tracker',
+		technologies: ['React', 'TypeScript', 'Tailwind', 'Electron'],
+		wip: true,
 	},
 	{
-		title: 'WeatherLens',
+		title: 'MimiStop',
 		description:
-			'An interactive weather dashboard with location search, hourly forecasts, and animated data visualizations.',
+			'Find a place with your baby.',
 		imageGradient: 'from-cyan-600 via-blue-600 to-indigo-700',
-		github: 'https://github.com',
+		github: 'https://github.com/koteles-david/mimi-stop',
 		live: null,
-		technologies: ['Next.js', 'GraphQL', 'Chart.js', 'OpenWeather'],
-	},
-	{
-		title: 'Snippet Vault',
-		description:
-			'A fast snippet organizer for developers with tagging, syntax highlighting, and one-click copy.',
-		imageGradient: 'from-violet-700 via-purple-600 to-pink-600',
-		github: 'https://github.com',
-		live: 'https://example.com',
-		technologies: ['Astro', 'SQLite', 'Rust', 'Tailwind'],
+		technologies: ['Svelte'],
+		wip: true,
 	},
 ] as const;
