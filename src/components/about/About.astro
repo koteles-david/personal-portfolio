@@ -1,0 +1,54 @@
+---
+import SectionLayout from '@/layouts/general/SectionLayout.astro';
+import ColumnsGridLayout from '@/layouts/general/ColumnsGridLayout.astro';
+import SectionDescription from '@/components/general/SectionDescription.astro';
+
+import AboutMeColumnsLayout from '@/layouts/about/AboutMeColumnsLayout.astro';
+import AboutMe from '@/components/about/AboutMe.astro';
+import AboutPortrait from '@/components/about/AboutPortrait.astro';
+import AboutTile from '@/components/about/AboutTile.astro';
+import { aboutStats } from '@/data/aboutStats';
+---
+
+<SectionLayout id="about" ariaLabelledby="about-heading">
+	<SectionDescription
+		header="Get to know me"
+		subheader="About Me"
+		headingId="about-heading"
+	/>
+
+	<ColumnsGridLayout columns={2}>
+		<AboutPortrait
+			initials="DK"
+			name="Dávid Koteleš"
+			role="Creative Web Developer"
+		/>
+
+		<AboutMe title="Building thoughtful digital experiences">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+				ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+				ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<p>
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+				nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+				deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				I enjoy turning complex ideas into clean, accessible interfaces — from rapid prototypes to
+				polished production apps across React, Vue, and Astro ecosystems.
+			</p>
+		</AboutMe>
+	</AboutMeColumnsLayout>
+
+	<ColumnsGridLayout columns={2}>
+		{
+			aboutStats.map((stat) => (
+				<AboutTile
+					{...stat}
+				/>
+			))
+		}
+	</ColumnsGridLayout>
+</SectionLayout>

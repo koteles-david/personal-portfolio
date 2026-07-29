@@ -1,0 +1,42 @@
+export const coreSkills = [
+	{
+		name: 'React',
+		level: 90,
+		levelLabel: 'Advanced',
+		description: 'Component architecture, hooks, state management, and performance tuning in production apps.',
+		accent: 'from-cyan-400 to-sky-500',
+		chip: 'bg-cyan-500/10 text-cyan-200 border-cyan-500/20',
+	},
+	{
+		name: 'Vue',
+		level: 85,
+		levelLabel: 'Advanced',
+		description: 'Composition API, Pinia, Nuxt workflows, and building maintainable UI systems.',
+		accent: 'from-emerald-400 to-green-500',
+		chip: 'bg-emerald-500/10 text-emerald-200 border-emerald-500/20',
+	},
+	{
+		name: 'Astro',
+		level: 88,
+		levelLabel: 'Advanced',
+		description: 'Islands architecture, content-focused sites, and blending static speed with interactivity.',
+		accent: 'from-orange-400 to-red-500',
+		chip: 'bg-orange-500/10 text-orange-200 border-orange-500/20',
+	},
+	{
+		name: 'JavaScript',
+		level: 92,
+		levelLabel: 'Expert',
+		description: 'Modern ES features, async patterns, DOM APIs, and writing clean modular code.',
+		accent: 'from-yellow-300 to-amber-400',
+		chip: 'bg-yellow-500/10 text-yellow-200 border-yellow-500/20',
+	},
+	{
+		name: 'TypeScript',
+		level: 90,
+		levelLabel: 'Advanced',
+		description: 'Strong typing, generics, utility types, and safer refactoring across large codebases.',
+		accent: 'from-blue-400 to-indigo-500',
+		chip: 'bg-blue-500/10 text-blue-200 border-blue-500/20',
+	},
+] as const;

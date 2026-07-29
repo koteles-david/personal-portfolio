@@ -1,0 +1,40 @@
+---
+import SectionLayout from '@/layouts/general/SectionLayout.astro';
+import ColumnsGridLayout from '@/layouts/general/ColumnsGridLayout.astro';
+
+import SectionDescription from '@/components/general/SectionDescription.astro';
+import CoreSkill from '@/components/general/CoreSkill.astro';
+import SkillGroup from '@/components/general/SkillGroup.astro';
+
+import { coreSkills } from '@/data/coreSkills';
+import { skillGroups } from '@/data/skillGroups';
+---
+
+<SectionLayout id="expertise" ariaLabelledby="expertise-heading">
+	<SectionDescription
+		header="What I work with"
+		subheader="Technical Expertise"
+		description="Framework-agnostic at heart, with deep experience across the modern JavaScript ecosystem."
+		headingId="expertise-heading"
+	/>
+
+	<ColumnsGridLayout columns={3}	>
+		{
+			coreSkills.map((skill) => (
+				<CoreSkill
+					{...skill}
+				/>
+			))
+		}
+	</ColumnsGridLayout>
+
+	<ColumnsGridLayout columns={3}>
+		{
+			skillGroups.map((group) => (
+				<SkillGroup
+					{...group}
+				/>
+			))
+		}
+	</ColumnsGridLayout>
+</SectionLayout>

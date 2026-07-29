@@ -1,0 +1,22 @@
+---
+import emailIcon from '../../assets/icons/email.svg?raw';
+import linkedinIcon from '../../assets/icons/linkedin.svg?raw';
+import githubIcon from '../../assets/icons/github.svg?raw';
+import type { IconName } from '../../types/icon';
+
+interface Props {
+	name: IconName;
+	class?: string;
+}
+
+const icons: Record<IconName, string> = {
+	email: emailIcon,
+	linkedin: linkedinIcon,
+	github: githubIcon,
+};
+
+const { name, class: className = 'h-5 w-5' } = Astro.props;
+const styledSvg = icons[name].replace('<svg', `<svg class="${className}"`);
+---
+
+<Fragment set:html={styledSvg} />

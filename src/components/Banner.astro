@@ -1,0 +1,35 @@
+---
+import BannerLayout from '../layouts/BannerLayout.astro';
+---
+
+<BannerLayout>
+	<p class="mb-4 font-display text-xs font-semibold uppercase tracking-[0.3em] text-violet-300/80">
+		Portfolio
+	</p>
+
+	<h1
+		id="banner-heading"
+		class="text-gradient-animate font-display max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl"
+	>
+		Creative Web Developer
+	</h1>
+
+	<p class="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
+		Crafting exceptional experiences using modern technologies
+	</p>
+
+	<div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+		<a
+			href="#projects"
+			class="inline-flex items-center rounded-xl bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition hover:brightness-110"
+		>
+			View my work
+		</a>
+		<a
+			href="#contact"
+			class="inline-flex items-center rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-zinc-200 backdrop-blur-sm transition hover:border-violet-400/30 hover:bg-white/10 hover:text-white"
+		>
+			Get in touch
+		</a>
+	</div>
+</BannerLayout>
