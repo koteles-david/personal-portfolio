@@ -6,7 +6,7 @@ export const personalProjects = [
 		imageGradient: 'from-indigo-600 via-violet-600 to-fuchsia-600',
 		imageSrc: '/overview.png',
 		github: 'https://github.com/koteles-david/finance-tracker',
-		technologies: ['React', 'TypeScript', 'Tailwind', 'Electron'],
+		technologies: ['Vue', 'TypeScript', 'Quasar', 'Electron'],
 	},
 	{
 		title: 'MimiStop',
