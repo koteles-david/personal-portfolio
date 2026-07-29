@@ -1,8 +1,8 @@
 export const contactLinks = [
 	{
 		label: 'Email',
-		value: 'david@koteles.com',
-		href: 'mailto:david@koteles.com',
+		value: 'david@koteles.cz',
+		href: 'mailto:david@koteles.cz',
 		description: 'Best for project inquiries and collaborations',
 		icon: 'email',
 	},
