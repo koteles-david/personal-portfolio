@@ -4,16 +4,16 @@ import { contactLinks } from '@/data/contactLinks';
 export const siteUrl = 'https://koteles.cz';
 
 export const site = {
-	name: 'Dávid Koteleš',
-	shortTitle: 'Dávid Koteleš',
-	title: 'Dávid Koteleš | Senior Frontend Developer',
+	name: 'Dávid Köteleš',
+	shortTitle: 'Dávid Köteleš',
+	title: 'Dávid Köteleš | Senior Frontend Developer',
 	description:
 		'Senior Frontend Developer with 5+ years of experience building React, Vue, and TypeScript applications—from architecture and OpenAPI contracts to scalable SPAs and AI-powered web features.',
 	jobTitle: 'Senior Frontend Developer',
 	locale: 'en_US',
 	defaultOgImage: '/my_photo.jpg',
 	keywords: [
-		'Dávid Koteleš',
+		'Dávid Köteleš',
 		'frontend developer',
 		'React developer',
 		'TypeScript',
