@@ -1,5 +1,34 @@
 export const personalProjects = [
 	{
+		title: 'ForxAI Mirror',
+		description:
+			'A real-time PPE compliance detection system using AI to ensure workers are wearing the correct PPE.',
+		imageGradient: 'from-violet-600 via-indigo-600 to-indigo-700',
+		link: {
+			href: 'https://www.youtube.com/watch?v=cvlajgiYgMw',
+			label: 'Watch demo',
+		},
+		technologies: ['Vue', 'TypeScript', 'HTTP Multipart', 'REST'],
+	},
+	{
+		title: 'Video Vision Platform',
+		description:
+			'Development of a platform that lets teams build business logic for quality inspection of video streams.',
+		imageGradient: 'from-cyan-600 via-blue-600 to-blue-700',
+		link: {
+			href: 'https://www.youtube.com/watch?v=TPru8qvmAKc',
+			label: 'Watch demo',
+		},
+		technologies: ['React', 'Vue', 'TypeScript', 'OpenAPI', 'REST', 'Zod', 'WebSockets'],
+	},
+	{
+		title: 'Platform documentation',
+		description:
+			'Documentation portal for the video-vision platform used to design and operate business logic for stream-based quality inspection.',
+		imageGradient: 'from-amber-600 via-orange-600 to-orange-700',
+		technologies: ['VitePress', 'TypeScript', 'Vue'],
+	},
+	{
 		title: 'Finance tracker',
 		description:
 			'Personal finance tracker with a focus on simplicity and ease of use.',
@@ -14,7 +43,6 @@ export const personalProjects = [
 			'Find a place with your baby.',
 		imageGradient: 'from-cyan-600 via-blue-600 to-indigo-700',
 		github: 'https://github.com/koteles-david/mimi-stop',
-		live: null,
 		technologies: ['Svelte'],
 		wip: true,
 	},

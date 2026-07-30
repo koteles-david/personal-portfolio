@@ -1,14 +1,22 @@
 ---
+import type { ProjectLink } from '@/types/project';
+
 interface Props {
 	projectTitle: string;
-	github: string;
-	live?: string | null;
+	github?: string;
+	link?: ProjectLink;
 }
 
-const { projectTitle, github, live } = Astro.props;
+const { projectTitle, github, link } = Astro.props;
+
+const hasLinks = Boolean(github || link);
 ---
 
+{
+	hasLinks && (
 <div class="mt-5 flex flex-wrap items-center gap-3 border-t border-white/10 pt-4">
+	{
+		github && (
 	<a
 		href={github}
 		target="_blank"
@@ -21,15 +29,17 @@ const { projectTitle, github, live } = Astro.props;
 		</svg>
 		GitHub
 	</a>
+		)
+	}
 
 	{
-		live && (
+		link && (
 			<a
-				href={live}
+				href={link.href}
 				target="_blank"
 				rel="noopener noreferrer"
 				class="inline-flex items-center gap-2 text-sm font-medium text-violet-300 transition hover:text-violet-100"
-				aria-label={`View live demo of ${projectTitle}`}
+				aria-label={`${link.label} for ${projectTitle}`}
 			>
 				<svg
 					class="h-4 w-4"
@@ -45,8 +55,10 @@ const { projectTitle, github, live } = Astro.props;
 						d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
 					/>
 				</svg>
-				Live demo
+				{link.label}
 			</a>
 		)
 	}
 </div>
+	)
+}

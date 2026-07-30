@@ -8,7 +8,7 @@ import ProjectLinks from '@/components/projects/ProjectLinks.astro';
 
 interface Props extends PersonalProject {}
 
-const { title, description, imageGradient, imageSrc, github, live, technologies, wip } = Astro.props;
+const { title, description, imageGradient, imageSrc, github, link, technologies, wip } = Astro.props;
 ---
 
 <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left backdrop-blur-sm transition hover:border-violet-400/30 hover:bg-white/[0.07]">
@@ -27,6 +27,6 @@ const { title, description, imageGradient, imageSrc, github, live, technologies,
 		<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{description}</p>
 
 		<ProjectTechList projectTitle={title} technologies={technologies} />
-		<ProjectLinks projectTitle={title} github={github} live={live} />
+		<ProjectLinks projectTitle={title} github={github} link={link} />
 	</div>
 </article>
