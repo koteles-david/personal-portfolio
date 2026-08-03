@@ -6,17 +6,19 @@ interface Props {
 
 const { title, skills } = Astro.props;
 ---
-<div class="rounded-2xl border border-white/10 bg-zinc-900/40 p-5">
-    <h3 class="font-display text-sm font-semibold uppercase tracking-[0.15em] text-zinc-300">
-        {title}
-    </h3>
-    <ul class="mt-4 flex flex-wrap gap-2">
-        {skills.map((skill) => (
-            <li>
-                <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300">
-                    {skill}
-                </span>
-            </li>
-        ))}
-    </ul>
+<div class="rounded-lg border border-stone-800 bg-[#1c1c1c] p-5">
+	<h3 class="font-serif text-base font-semibold text-stone-200">
+		{title}
+	</h3>
+	<ul class="mt-4 flex flex-wrap gap-2">
+		{
+			skills.map((skill) => (
+				<li>
+					<span class="inline-flex rounded-md border border-stone-700 bg-stone-900/60 px-2.5 py-1 text-xs text-stone-400">
+						{skill}
+					</span>
+				</li>
+			))
+		}
+	</ul>
 </div>

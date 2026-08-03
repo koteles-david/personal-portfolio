@@ -3,26 +3,26 @@ import SectionLayout from '@/layouts/general/SectionLayout.astro';
 import ColumnsGridLayout from '@/layouts/general/ColumnsGridLayout.astro';
 import SectionDescription from '@/components/general/SectionDescription.astro';
 
-import AboutMeColumnsLayout from '@/layouts/about/AboutMeColumnsLayout.astro';
 import AboutMe from '@/components/about/AboutMe.astro';
 import AboutPortrait from '@/components/about/AboutPortrait.astro';
 import AboutTile from '@/components/about/AboutTile.astro';
 import { aboutStats } from '@/data/aboutStats';
+import myPhoto from '@/assets/my_photo.jpg';
 ---
 
 <SectionLayout id="about" ariaLabelledby="about-heading">
 	<SectionDescription
 		header="Get to know me"
-		subheader="About Me"
+		subheader="About"
 		headingId="about-heading"
 	/>
 
 	<ColumnsGridLayout columns={2}>
 		<AboutPortrait
 			initials="DK"
-			name="Dávid Köteleš"
-			role="Creative Web Developer"
-			photoSrc="/my_photo.jpg"
+			name="Dávid Koteleš"
+			role="Senior Frontend Developer"
+			photoSrc={myPhoto.src}
 		/>
 
 		<AboutMe title="Building thoughtful digital experiences">
@@ -35,14 +35,12 @@ import { aboutStats } from '@/data/aboutStats';
 				Core Tech & Toolkit: TypeScript | React | Vue | Svelte | OpenAPI / REST | GraphQL | Sockets | AI Integration | NodeJS
 			</p>
 		</AboutMe>
-	</AboutMeColumnsLayout>
+	</ColumnsGridLayout>
 
 	<ColumnsGridLayout columns={2}>
 		{
 			aboutStats.map((stat) => (
-				<AboutTile
-					{...stat}
-				/>
+				<AboutTile {...stat} />
 			))
 		}
 	</ColumnsGridLayout>

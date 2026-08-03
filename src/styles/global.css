@@ -1,36 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-	--font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+	--font-serif: "Newsreader", ui-serif, Georgia, serif;
+	--font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+	--color-surface: #141414;
+	--color-surface-raised: #1c1c1c;
+	--color-border: #2e2e2e;
+	--color-accent: #e8a838;
 }
 
-@keyframes gradient-shift {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+html {
+	font-family: var(--font-sans);
 }
 
-.text-gradient-animate {
-	background-image: linear-gradient(
-		90deg,
-		#e4e4e7 0%,
-		#a78bfa 15%,
-		#818cf8 30%,
-		#e879f9 45%,
-		#22d3ee 60%,
-		#c4b5fd 75%,
-		#f0abfc 90%,
-		#e4e4e7 100%
+body {
+	background-color: var(--color-surface);
+	background-image: radial-gradient(
+		ellipse 120% 80% at 50% -30%,
+		rgba(232, 168, 56, 0.06),
+		transparent 55%
 	);
-	background-size: 300% 100%;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: gradient-shift 5s ease-in-out infinite;
 }

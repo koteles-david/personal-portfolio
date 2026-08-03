@@ -1,4 +1,5 @@
 import { contactLinks } from '@/data/contactLinks';
+import myPhoto from '@/assets/my_photo.jpg';
 
 /** Canonical production URL — keep in sync with `site` in astro.config.mjs */
 export const siteUrl = 'https://koteles.cz';
@@ -11,7 +12,7 @@ export const site = {
 		'Senior Frontend Developer with 5+ years of experience building React, Vue, and TypeScript applications—from architecture and OpenAPI contracts to scalable SPAs and AI-powered web features.',
 	jobTitle: 'Senior Frontend Developer',
 	locale: 'en_US',
-	defaultOgImage: '/my_photo.jpg',
+	defaultOgImage: myPhoto.src,
 	keywords: [
 		'Dávid Köteleš',
 		'frontend developer',

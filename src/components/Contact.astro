@@ -2,7 +2,6 @@
 import SectionLayout from '@/layouts/general/SectionLayout.astro';
 import RectangleLayout from '@/layouts/general/RectangleLayout.astro';
 import ColumnsGridLayout from '@/layouts/general/ColumnsGridLayout.astro';
-import AmbientGlow from '@/layouts/general/AmbientGlow.astro';
 
 import ContactLink from '@/components/general/ContactLink.astro';
 import SectionDescription from '@/components/general/SectionDescription.astro';
@@ -11,7 +10,6 @@ import { contactLinks } from '@/data/contactLinks';
 ---
 <SectionLayout id="contact" ariaLabelledby="contact-heading">
 	<RectangleLayout>
-		<AmbientGlow />
 		<SectionDescription
 			header="Let's work together"
 			subheader="Contact"
@@ -25,6 +23,6 @@ import { contactLinks } from '@/data/contactLinks';
 					<ContactLink {...link} />
 				))
 			}
-		</ContactColumnLayout>
+		</ColumnsGridLayout>
 	</RectangleLayout>
 </SectionLayout>

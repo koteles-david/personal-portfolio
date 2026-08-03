@@ -8,12 +8,11 @@ import ProjectLinks from '@/components/projects/ProjectLinks.astro';
 
 interface Props extends PersonalProject {}
 
-const { title, description, imageGradient, imageSrc, github, link, technologies, wip } = Astro.props;
+const { title, description, imageSrc, github, link, technologies, wip } = Astro.props;
 ---
 
-<article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left backdrop-blur-sm transition hover:border-violet-400/30 hover:bg-white/[0.07]">
+<article class="group flex flex-col overflow-hidden rounded-lg border border-stone-800 bg-[#1c1c1c] text-left transition hover:border-stone-700">
 	<ProjectPreview
-		imageGradient={imageGradient}
 		imageSrc={imageSrc}
 		projectTitle={title}
 		wip={Boolean(wip)}
@@ -21,10 +20,10 @@ const { title, description, imageGradient, imageSrc, github, link, technologies,
 
 	<div class="flex flex-1 flex-col p-5">
 		<div class="flex flex-wrap items-center gap-2">
-			<h3 class="font-display text-xl font-semibold text-zinc-50">{title}</h3>
+			<h3 class="font-serif text-lg font-semibold text-stone-100">{title}</h3>
 			{wip && <ProjectWipBadge projectTitle={title} />}
 		</div>
-		<p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{description}</p>
+		<p class="mt-2 flex-1 text-sm leading-relaxed text-stone-400">{description}</p>
 
 		<ProjectTechList projectTitle={title} technologies={technologies} />
 		<ProjectLinks projectTitle={title} github={github} link={link} />

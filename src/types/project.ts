@@ -6,7 +6,6 @@ export type ProjectLink = {
 export type PersonalProject = {
 	title: string;
 	description: string;
-	imageGradient: string;
 	github?: string;
 	link?: ProjectLink;
 	imageSrc?: string;
